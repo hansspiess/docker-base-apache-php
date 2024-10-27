@@ -2,6 +2,8 @@ Base image for local development of Php/MySql projects.
 
 Build this image with `docker build -t  hansspiess/base-apache-php . --platform linux/amd64`.
 
+Push it with `docker push hansspiess/base-apache-php:latest`.
+
 Reference this image in a `docker-compose.yml` like this:
 
 ```

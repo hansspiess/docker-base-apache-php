@@ -21,7 +21,7 @@ RUN a2enmod rewrite
 # Copy custom ports.conf, 000-default.conf, and php.ini
 COPY ./apache2/ports.conf /etc/apache2/ports.conf
 COPY ./apache2/000-default.conf /etc/apache2/sites-available/000-default.conf
-COPY ./php.ini /usr/local/etc/php/php.ini
+COPY php.ini /usr/local/etc/php/
 
 # Set working directory
 WORKDIR /var/www/html
