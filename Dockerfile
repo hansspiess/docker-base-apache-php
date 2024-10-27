@@ -18,9 +18,10 @@ RUN docker-php-ext-install curl && docker-php-ext-enable curl
 # Enable Apache mod_rewrite (often required for WordPress permalinks)
 RUN a2enmod rewrite
 
-# Copy the custom ports.conf and 000-default.conf
+# Copy custom ports.conf, 000-default.conf, and php.ini
 COPY ./apache2/ports.conf /etc/apache2/ports.conf
 COPY ./apache2/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY ./php.ini /usr/local/etc/php/php.ini
 
 # Set working directory
 WORKDIR /var/www/html
